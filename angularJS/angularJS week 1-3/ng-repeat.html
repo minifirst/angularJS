@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../angular.js"></script>
+    <script src="ng-repeat.js"></script>
+</head>
+<body>
+<div ng-controller="test">
+    <ul>
+        <li ng-repeat="cellphone in items">
+            {{cellphone}}
+        </li>
+    </ul>
+    <ul>
+        <li ng-repeat="Sports in orders">
+            {{Sports.name}} type is {{Sports.type}}
+        </li>
+    </ul>
+    <table border="2px solid black"; width="80%">
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>DELETE</th>
+            <th>EDIT</th>
+        </tr>
+        <tr ng-repeat="team in teams" align="center">
+            <td>{{$index+1}}</td>
+            <td>{{team.Tname}}</td>
+            <td>{{team.Location}}</td>
+            <td><button ng-click="DR($index)">DELETE</button> </td>
+            <td><button ng-click="EDIT($index)">EDIT</button> </td>
+        </tr>
+    </table>
+    <button ng-click="built()">CREATE</button>
+    <button ng-click="DF()">DELETE FIRST</button>
+    <button ng-click="DL()">DELETE LAST</button>
+    <div ng-init="img1" ng-show='tableVisable'>
+        <form>
+            <table>
+                <tr>
+                    <td>NAME:</td>
+                    <td><input type="text" ng-model="teamname"></td>
+                </tr>
+                <tr>
+                    <td>LOCATION:</td>
+                    <td><input type="text" ng-model="place"></td>
+                </tr>
+                <tr>
+                    <td><button ng-click="save()">SAVE</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</div>
+</div>
+</body>
+</html>

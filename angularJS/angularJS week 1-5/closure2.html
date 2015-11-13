@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>INPUT:<input type="text" id="content"/></p>
+<p><button id="btn" onclick="submit()">SUBMIT</button></p>
+
+<p id="output"></p>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $(document).ready(function () {
+        var closure = function () {
+            $("#btn").click(outer);
+            function outer() {
+                var getValue = $("#content").val();
+                function addResult()
+                {
+                    $("#btn").after("<p>user type:"+getValue+"</p>");
+                }
+                addResult();
+            }
+        }
+        closure();
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var textOut = "global";
+    function outer(){
+        var textIn = "Hello" ;
+        function inner(){
+            alert("textOut is "+textOut);
+            document.write("textIn"+textIn);
+        }
+        inner();
+    }
+    var p = outer();
+    p;
+</script>
+</body>
+</html>

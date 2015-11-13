@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $(document).ready(function(){
+       function fruits(name2,color2,count2){
+           this.name1=name2;
+           this.color1=color2;
+           this.count1=count2;
+
+        }
+        var apple = new fruits("apple","red",3);
+        console.log(apple);
+        function cars(brand,model,country){
+            this.brand=brand;
+            this.model=model;
+            this.country=country;
+        }
+        var BMW3= new cars("BMW","Model 3","GERMANY");
+        var BMW5= new cars("BMW","Model 5","GERMANY");
+        var BMW7= new cars("BMW","Model 7","GERMANY");
+        console.log(BMW3);
+
+        function NBA(city,name,star){
+            this.city=city;
+            this.name=name;
+            this.player=star;
+        }
+        var GSW = new NBA("Oakland","Warriors","SC30");
+        var NYK = new NBA("New York City","Knicks","CA7");
+        var LAL = new NBA("Los Angels","Lakers","KB24");
+        console.log(GSW);
+    })
+</script>
+</body>
+</html>

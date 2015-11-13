@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sampleAPP">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .bgcolor{
+            background-color: yellow;
+        }
+        .size{
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body ng-controller="fCtr">
+<div ng-class="firstClass">this is method 1
+    <p>{{name}}</p>
+</div>
+
+<div ng-class="secondClass">this is method 2
+    <p>{{name}}</p>
+</div>
+
+<div ng-class="thirdClass">this is method 3
+    <p>{{name}}</p>
+</div>
+
+
+<script src="../angular.min.js"></script>
+<script>
+    var fapp=angular.module("sampleAPP",[]);
+    fapp.controller("fCtr", function ($scope) {
+        $scope.name="asdas";
+        $scope.firstClass="bgcolor";
+        $scope.secondClass=["bgcolor","size"];
+        $scope.thirdClass={"bgcolor":false,"size":true};
+    });
+</script>
+</body>
+</html>

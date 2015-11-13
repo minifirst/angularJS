@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="../angular.js"></script>
+<script>
+    function outer(){
+        var text = "Hello";
+        alert("hello in outside");
+        function inner(text){
+            alert("inner"+text);
+        };
+        inner();
+    };
+
+    outer();
+</script>
+</body>
+</html>
